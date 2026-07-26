@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mecabricks 3Dデモ - Cat</title>
-    <!-- ライブラリのURLを修正しました -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script type="module" src="https://googleapis.com"></script>
     <style>
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; width: 100vw; height: 100vh; background-color: #f0f3f5; display: flex; justify-content: center; align-items: center; }
@@ -14,6 +13,10 @@
 </head>
 <body>
 
+    <!-- 
+        - camera-orbit="0deg 75deg 150%" を追加しました。
+        - 最後の「150%」という数値を大きくするほど、カメラが遠ざかってモデルが小さく見えます。
+    -->
     <model-viewer 
         src="Cat.glb" 
         alt="Mecabricks Cat モデル"
@@ -23,7 +26,8 @@
         touch-action="pan-y"
         shadow-intensity="1"
         environment-image="neutral"
-        exposure="1.2">
+        exposure="1.2"
+        camera-orbit="0deg 75deg 150%">
     </model-viewer>
 
 </body>
