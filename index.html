@@ -13,10 +13,6 @@
 </head>
 <body>
 
-    <!-- 
-        - camera-orbit="0deg 75deg 150%" を追加しました。
-        - 最後の「150%」という数値を大きくするほど、カメラが遠ざかってモデルが小さく見えます。
-    -->
     <model-viewer 
         src="Cat.glb" 
         alt="Mecabricks Cat モデル"
@@ -27,7 +23,10 @@
         shadow-intensity="1"
         environment-image="neutral"
         exposure="1.2"
-        camera-orbit="0deg 75deg 11500%">
+        <!-- 💡 遠くへ引く限界値を 10000% まで解放します -->
+        max-camera-orbit="auto auto 10000%"
+        <!-- 💡 初期カメラ位置を 5000% などに大きくします -->
+        camera-orbit="0deg 75deg 5000%">
     </model-viewer>
 
 </body>
